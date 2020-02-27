@@ -1,0 +1,21 @@
+1.
+To create hidden file
+mkdir .folderName
+
+To create hidden file (for example .txt file)
+touch .fileName.txt
+
+To display it in CLI
+ls -a
+
+
+2.
+to create multiple nested directories
+mkdir -p these/folders/are/just/for/fun
+
+
+
+3.
+To append a message to a file, without a newline character
+echo "first message" >> fileName.txt
+echo "second message" >> fileName.txt
