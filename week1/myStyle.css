@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Chango|Heebo|Noto+Sans+KR&display=swap');
+
+#container
+{
+  padding: 1%;
+  margin: 1%;
+  border: rgb(240, 255, 255) dotted;
+  font-family: 'Heebo', 'Noto Sans KR', sans-serif;
+}
+*
+{
+  box-sizing: border-box;
+}
+
+/*       HEADER                          */
+header h1
+{
+  font-size: 200%;
+  text-transform: uppercase;
+  margin: 0;
+  font-family: 'Chango', sans-serif;
+}
+
+.bg-image
+{
+  background:#78d6c3 url("me.jpeg") no-repeat center center / cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+  
+/* Position text in the middle of the page/image */
+.bg-text
+{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 10px inset #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 55%;
+  padding: 4% 0;
+  text-align: center;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+}
+
+.bg-text p
+{
+  padding: 0 1%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header a
+{
+  display: inline-block;
+  position: relative;
+  padding: 1% 5%;
+  border: 2px rgb(255, 255, 255)  solid;
+  font-size: 100%;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin: 0.5%;
+}
+
+header a:hover
+{ 
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 5px #000;
+  transition-delay: 0.2s;
+}
+
+/*       1 . ARTICLE             ABOUT ME             */
+article
+{
+  width: 100%;
+  height: 100%;
+  background-color:rgb(255, 255, 255);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding:2%;
+  margin: 1% 0 2% 0;
+}
+
+.first_left {
+  float: left;
+  text-align: justify;
+  line-height: 1.3;
+  padding: 4% 4% 2% 4%;
+  margin: 2% 0;
+  width: 65%;
+  overflow: hidden;
+  height: 100%; /* only for demonstration, should be removed */
+}
+
+.first_right{
+  float: right;
+  width: 30%;
+  height: 100%; /* only for demonstration, should be removed */
+  padding: 1%;
+  margin: 3% 0 0 0;
+  
+}
+
+.aboutMe
+{
+  display: inline-block;
+  position: relative;
+  left: 10%;
+  color: #fff;
+  padding: 2% 1%;
+  width: 80%;
+  border-radius: 50%;/* to do circle to foto which center me*/
+}
+
+/*       2 . ARTICLE            SKILL            */
+article.firstcontent .skills_name
+{
+  display: block;
+  float: left;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: rgb(8, 5, 5);
+  font-weight: bold;
+}
+
+progress[value]::-webkit-progress-value
+{ 
+  background-color:#005fad;   
+}
+progress::-webkit-progress-bar
+{ 
+  background: rgba(160, 160, 160, 0.623); 
+}
+
+article.firstcontent .skills_per 
+{
+  display: block;
+  float: right;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #0064b4;
+}
+
+article.firstcontent .container
+{
+  width: 100%;
+  background-color:rgb(218, 216, 216);
+}
+  /*grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | itemname;*/
+  article.firstcontent .item1 { grid-area: 1 / 1 / 2 / 2; }
+  article.firstcontent .item2 { grid-area: 1 / 2 / 2 / 3; }
+  article.firstcontent .item3 { grid-area: 2 / 1 / 3 / 2; }
+  article.firstcontent .item4 { grid-area: 2 / 2 / 3 / 3; }
+  article.firstcontent .item5 { grid-area: 3 / 1 / 4 / 2; }
+  article.firstcontent .item6 { grid-area: 3 / 2 / 4 / 3; }
+  
+article.firstcontent .grid-container
+{
+  display: grid;
+  grid-auto-rows: 50px;
+  grid-gap: 30px;
+  padding: 6% 1% 2% 1%;
+}
+
+
+/*       3. ARTICLE            EDUCATION            */
+article ul
+{
+  list-style-type: none;
+  width: 90vw;
+}
+
+article h4
+{
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+article li img
+{
+  float: left;
+  margin: 0 3% 0 0;
+  width: 20%;
+}
+
+article li
+{
+  padding: 2%;
+  overflow: auto;
+}
+
+article li:hover
+{
+  background: rgba(147, 231, 150, 0.712);
+  cursor: pointer;
+}
+
+/*       4. ARTICLE            Work           */
+article.thirdcontent li img
+{
+  float: right;
+  margin: 0 3% 0 0;
+  width: 20%;
+}
+
+article.thirdcontent li:hover
+{
+  background: rgba(170, 152, 235, 0.616);
+  cursor: pointer;
+}
+
+/* Clear floats after the columns */
+section:after, article:after 
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+/*           FOOTER            */
+footer
+{
+  padding: 2%;
+	height: 120%;
+  display: flex;/*Align the flex items at the center of the container:*/
+  justify-content: center;/*The justify-content property aligns the flexible container's items when the items do not use all available space on the main-axis (horizontally).*/
+  align-items: center;/*Use the align-items property to align the items vertically.*/
+  padding: 3rem 2rem;
+  background-color: #778899;
+  font-size: 80%;
+}
+
+.copyright 
+{
+  font-family: 'Lucida Console', Monospace;
+  text-align:center;
+  color: #eeeeee;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: rgb(125, 125, 241);
+   
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background-color: rgb(238, 238, 192);
+  }
+}
