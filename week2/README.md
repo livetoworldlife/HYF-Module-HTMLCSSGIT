@@ -4,3 +4,4 @@
     https://github.com/livetoworldlife/git_practice-
     
 2- The Drones website
+    https://htmlpreview.github.io/?https://github.com/livetoworldlife/HYF-Module-HTMLCSSGIT/blob/master/week2/index.html
